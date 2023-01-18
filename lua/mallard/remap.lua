@@ -1,8 +1,8 @@
 -- allows highlighted text to be moved
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
-vim.keymap.set("v", "<A-down>", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "<A-up>", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "<S-down>", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "<S-up>", ":m '<-2<CR>gv=gv")
 
 -- better cursor positions on join, screen up/down and search results
 vim.keymap.set("n", "J", "mzJ`z")
