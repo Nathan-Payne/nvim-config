@@ -8,7 +8,8 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.0',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
@@ -16,8 +17,8 @@ return require('packer').startup(function(use)
     -- use {'nyoom-engineering/oxocarbon.nvim'}
     -- use {"catppuccin/nvim", as = "catppuccin"}
     -- use "navarasu/onedark.nvim"
+    -- use { "rose-pine/neovim", as = "rose-pine" }
     use { "aktersnurra/no-clown-fiesta.nvim" }
-    use { "rose-pine/neovim", as = "rose-pine" }
 
     use({ 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } })
 
@@ -85,8 +86,23 @@ return require('packer').startup(function(use)
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-        config = function ()
+        config = function()
             require("lualine").setup()
+        end
+    }
+
+    -- todo: find out why colors not applying / being overridden
+    use {
+        "folke/todo-comments.nvim",
+        requires = "nvim-lua/plenary.nvim",
+    }
+
+    -- todo: set up trouble remaps / config
+    use {
+        "folke/trouble.nvim",
+        requires = "kyazdani42/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {}
         end
     }
 

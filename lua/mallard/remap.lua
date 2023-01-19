@@ -1,3 +1,5 @@
+-- neovim specific remaps, no plugins
+
 -- allows highlighted text to be moved
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
@@ -21,9 +23,8 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 -- deletes to the void register
 vim.keymap.set({ "n", "v" }, "<leader>x", [["_d]])
 
--- disables Q, look into tmux sessionizer, format shortcut
+-- disables Q
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- quickfix navigation??
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
