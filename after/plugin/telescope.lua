@@ -1,7 +1,16 @@
 require('telescope').setup {
     defaults = {
-        layout_strategy = 'flex',
-        layout_config = { height = 0.90, width = 0.90 },
+        layout_strategy = 'vertical',
+        layout_config = {
+            height = 0.90,
+            width = 0.90,
+            vertical = {
+                preview_cutoff = 1,
+            },
+            horizontal = {
+                preview_cutoff = 1,
+            },
+        },
     },
     pickers = {
         git_status = {

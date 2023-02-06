@@ -39,7 +39,13 @@ return require('packer').startup(function(use)
             { 'hrsh7th/cmp-nvim-lua' },
 
             -- Snippets
-            { 'L3MON4D3/LuaSnip' },
+            {
+                'L3MON4D3/LuaSnip',
+                wants = { "friendly-snippets" },
+                config = function()
+                    require("config.snip").setup()
+                end
+            },
             { 'rafamadriz/friendly-snippets' },
         }
     }
