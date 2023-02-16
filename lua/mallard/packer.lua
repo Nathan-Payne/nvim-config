@@ -1,4 +1,3 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
@@ -14,11 +13,9 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    -- use {'nyoom-engineering/oxocarbon.nvim'}
-    -- use {"catppuccin/nvim", as = "catppuccin"}
-    -- use "navarasu/onedark.nvim"
-    -- use { "rose-pine/neovim", as = "rose-pine" }
+    use { 'nyoom-engineering/oxocarbon.nvim', as = "oxocarbon" }
     use { "aktersnurra/no-clown-fiesta.nvim" }
+    use {"catppuccin/nvim", as = "catppuccin"}
 
     use({ 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } })
 
@@ -39,13 +36,7 @@ return require('packer').startup(function(use)
             { 'hrsh7th/cmp-nvim-lua' },
 
             -- Snippets
-            {
-                'L3MON4D3/LuaSnip',
-                wants = { "friendly-snippets" },
-                config = function()
-                    require("config.snip").setup()
-                end
-            },
+            { 'L3MON4D3/LuaSnip' },
             { 'rafamadriz/friendly-snippets' },
         }
     }
@@ -103,7 +94,6 @@ return require('packer').startup(function(use)
         requires = "nvim-lua/plenary.nvim",
     }
 
-    -- todo: set up trouble remaps / config
     use {
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons",
