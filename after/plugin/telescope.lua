@@ -1,9 +1,9 @@
 require('telescope').setup {
     defaults = {
-        layout_strategy = 'vertical',
+        layout_strategy = 'flex',
         layout_config = {
-            height = 0.90,
-            width = 0.90,
+            height = 0.99,
+            width = 0.70,
             vertical = {
                 preview_cutoff = 1,
             },
@@ -14,11 +14,26 @@ require('telescope').setup {
     },
     pickers = {
         git_status = {
-            theme = "dropdown",
+            theme = "ivy",
         },
         buffers = {
             theme = "ivy",
-        }
+        },
+        commands = {
+            theme = "ivy",
+        },
+        jumplist = {
+            theme = "ivy",
+        },
+        lsp_references = {
+            theme = "ivy",
+        },
+        lsp_implementations = {
+            theme = "ivy",
+        },
+        treesitter = {
+            theme = "ivy",
+        },
     },
 }
 
