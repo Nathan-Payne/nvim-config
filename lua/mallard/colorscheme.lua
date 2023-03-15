@@ -20,6 +20,9 @@ require('catppuccin').setup {
         properties = {},
         types = {},
     },
+    integrations = {
+        fidget = true,
+    },
     color_overrides = {
         mocha = {
             rosewater = "#F5E0DC",
@@ -66,7 +69,7 @@ require('catppuccin').setup {
         mocha = function(cp)
             return {
                 -- For base configs.
-                NormalFloat = { fg = cp.text, bg = cp.none or cp.base },
+                NormalFloat = { fg = cp.text, bg = cp.base },
                 CursorLineNr = { fg = cp.base },
                 Search = { bg = cp.surface1, fg = cp.pink, style = { "bold" } },
                 IncSearch = { bg = cp.pink, fg = cp.surface1 },
@@ -77,13 +80,13 @@ require('catppuccin').setup {
 
                 ColorColumn = {  bg = "#222028" },
                 TelescopeBorder = { fg = cp.surface1 },
-                LspInfoBorder = { fg = cp.surface1 },
+                LspInfoBorder = { bg = cp.base, fg = cp.surface1 },
 
                 -- For native lsp configs.
-                DiagnosticVirtualTextError = { bg = cp.none },
-                DiagnosticVirtualTextWarn = { bg = cp.none },
-                DiagnosticVirtualTextInfo = { bg = cp.none },
-                DiagnosticVirtualTextHint = { fg = cp.rosewater, bg = cp.none },
+                DiagnosticVirtualTextError = { bg = cp.base },
+                DiagnosticVirtualTextWarn = { bg = cp.base },
+                DiagnosticVirtualTextInfo = { bg = cp.base },
+                DiagnosticVirtualTextHint = { fg = cp.rosewater, bg = cp.base },
 
                 DiagnosticHint = { fg = cp.rosewater },
                 LspDiagnosticsDefaultHint = { fg = cp.rosewater },
@@ -92,8 +95,8 @@ require('catppuccin').setup {
                 LspDiagnosticsUnderlineHint = { sp = cp.rosewater },
 
                 -- For fidget.
-                FidgetTask = { bg = cp.base, fg = cp.overlay2 },
-                FidgetTitle = { fg = cp.blue, style = { "bold" } },
+                FidgetTitle = { bg = cp.base, fg = cp.teal, style = { "bold" } },
+                FidgetTask = { bg = cp.base, fg = cp.subtext0 },
 
                 -- For trouble.nvim
                 TroubleNormal = { bg = cp.base },
