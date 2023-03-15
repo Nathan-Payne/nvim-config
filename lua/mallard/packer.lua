@@ -1,4 +1,3 @@
-
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
@@ -15,7 +14,7 @@ return require('packer').startup(function(use)
 
     use { 'nyoom-engineering/oxocarbon.nvim', as = "oxocarbon" }
     use { "aktersnurra/no-clown-fiesta.nvim" }
-    use {"catppuccin/nvim", as = "catppuccin"}
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     use({ 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } })
 
@@ -104,6 +103,10 @@ return require('packer').startup(function(use)
         config = function()
             require("trouble").setup {}
         end
+    }
+
+    use {
+        "beauwilliams/focus.nvim"
     }
 
 end)
