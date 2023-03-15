@@ -75,6 +75,10 @@ require('catppuccin').setup {
                 Typedef = { fg = cp.yellow },
                 StorageClass = { fg = cp.red, style = { "italic" } },
 
+                ColorColumn = {  bg = "#222028" },
+                TelescopeBorder = { fg = cp.surface1 },
+                LspInfoBorder = { fg = cp.surface1 },
+
                 -- For native lsp configs.
                 DiagnosticVirtualTextError = { bg = cp.none },
                 DiagnosticVirtualTextWarn = { bg = cp.none },
@@ -88,7 +92,7 @@ require('catppuccin').setup {
                 LspDiagnosticsUnderlineHint = { sp = cp.rosewater },
 
                 -- For fidget.
-                FidgetTask = { bg = cp.none, fg = cp.surface2 },
+                FidgetTask = { bg = cp.base, fg = cp.overlay2 },
                 FidgetTitle = { fg = cp.blue, style = { "bold" } },
 
                 -- For trouble.nvim
@@ -167,13 +171,13 @@ require('catppuccin').setup {
 
                 ["@property.typescript"] = { fg = cp.lavender, style = { "italic" } },
                 -- ["@constructor.typescript"] = { fg = cp.lavender },
-
                 -- ["@constructor.tsx"] = { fg = cp.lavender },
                 -- ["@tag.attribute.tsx"] = { fg = cp.mauve },
 
                 ["@type.css"] = { fg = cp.lavender },
                 ["@property.css"] = { fg = cp.text, style = { "italic" } },
 
+                javaScriptCommentTodo = { fg = cp.red },
             }
         end,
     },

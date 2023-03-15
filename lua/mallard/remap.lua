@@ -1,4 +1,4 @@
--- neovim specific remaps, no plugins
+-- neovim specific remaps, see /after for plugin specific remaps
 
 -- allows highlighted text to be moved
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv")
@@ -25,15 +25,6 @@ vim.keymap.set({ "n", "v" }, "<leader>x", [["_d]])
 
 -- disables Q
 vim.keymap.set("n", "Q", "<nop>")
-
--- quickfix navigation??
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
-
--- replace all under cursor
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- save + copy file
 vim.keymap.set("n", "<C-s>", "<cmd> w <CR>")
