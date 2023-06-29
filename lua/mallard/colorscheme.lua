@@ -185,3 +185,4 @@ require('catppuccin').setup {
         end,
     },
 }
+vim.cmd.colorscheme "catppuccin"

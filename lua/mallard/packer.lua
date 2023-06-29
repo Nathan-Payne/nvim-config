@@ -91,7 +91,6 @@ return require('packer').startup(function(use)
         end
     }
 
-    -- todo: find out why colors not applying / being overridden
     use {
         "folke/todo-comments.nvim",
         requires = "nvim-lua/plenary.nvim",
@@ -109,4 +108,29 @@ return require('packer').startup(function(use)
         "beauwilliams/focus.nvim"
     }
 
+    use {
+        "windwp/nvim-ts-autotag"
+    }
+
+    use {
+        "danymat/neogen",
+        config = function()
+            require('neogen').setup({ snippet_engine = "luasnip" })
+        end,
+        requires = "nvim-treesitter/nvim-treesitter",
+    }
+
+    use {
+        "ggandor/leap.nvim",
+    }
+
+    -- todo: https://github.com/rcarriga/awesome-neovim
+    -- olimorris/persisted.nvim session manager
+    -- Pocco81/TrueZen.nvim cool zen mod
+    -- configure useful snippets via luasnip directory, add to dotfiles, integrate annotate
+    -- gennaro-tedesco/nvim-jqx see if better than using jq on cli
+    -- rest-nvim/rest.nvim could be useful for quick requests - possible to adapt insomnia config?
+    -- sindrets/diffview.nvim might make handling diffs easier
+    --
+    -- fixme: leap not working
 end)

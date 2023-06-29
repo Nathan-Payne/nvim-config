@@ -30,3 +30,5 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-s>", "<cmd> w <CR>")
 vim.keymap.set("n", "<C-c>", "<cmd> %y+ <CR>")
 
+-- formats JSON files using jq
+vim.keymap.set("n", "<C-J>", ":%!jq '.' <CR>")
