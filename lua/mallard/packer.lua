@@ -124,6 +124,15 @@ return require('packer').startup(function(use)
         "ggandor/leap.nvim",
     }
 
+    use {
+        "mfussenegger/nvim-dap"
+    }
+
+    use {
+        "rcarriga/nvim-dap-ui",
+        requires = { "mfussenegger/nvim-dap" }
+    }
+
     -- todo: https://github.com/rcarriga/awesome-neovim
     -- olimorris/persisted.nvim session manager
     -- Pocco81/TrueZen.nvim cool zen mod
@@ -132,5 +141,5 @@ return require('packer').startup(function(use)
     -- rest-nvim/rest.nvim could be useful for quick requests - possible to adapt insomnia config?
     -- sindrets/diffview.nvim might make handling diffs easier
     --
-    -- fixme: leap not working
+    -- fixme: leap showing error - highlight group not there?
 end)

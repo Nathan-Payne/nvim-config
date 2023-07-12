@@ -4,10 +4,10 @@ vim.opt.nu = true
 vim.opt.nuw = 1
 vim.opt.relativenumber = true
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+vim.opt.tabstop = 4 -- cols of whitespace a tab character takes up
+vim.opt.softtabstop = 0 -- cols cursor moves on tab press (or backspace)
+vim.opt.shiftwidth = 4 -- cols a level of indentation is worth
+vim.opt.expandtab = true -- expands tabs to spaces
 
 vim.opt.smartindent = true
 
