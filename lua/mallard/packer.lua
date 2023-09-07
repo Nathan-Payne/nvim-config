@@ -105,7 +105,7 @@ return require('packer').startup(function(use)
     }
 
     use {
-        "beauwilliams/focus.nvim"
+        "nvim-focus/focus.nvim"
     }
 
     use {
@@ -140,6 +140,5 @@ return require('packer').startup(function(use)
     -- gennaro-tedesco/nvim-jqx see if better than using jq on cli
     -- rest-nvim/rest.nvim could be useful for quick requests - possible to adapt insomnia config?
     -- sindrets/diffview.nvim might make handling diffs easier
-    --
-    -- fixme: leap showing error - highlight group not there?
+    -- debugger, dap
 end)

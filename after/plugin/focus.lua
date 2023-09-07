@@ -1,7 +1,12 @@
 require('focus').setup({
-    autoresize = false,
-    cursorline = false,
-    signcolumn = false,
+    autoresize = {
+        enable = false,
+        width =  90
+    },
+    ui = {
+        cursorline = false,
+        signcolumn = false,
+    },
 })
 
 vim.keymap.set('n', '<S-left>', ':FocusSplitLeft<CR>', { silent = true })
