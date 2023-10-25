@@ -1,1 +1,2 @@
-require("mallard")
+require("mallard.core")
+require("mallard.lazy")
