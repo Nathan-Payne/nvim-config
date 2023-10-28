@@ -1,7 +1,7 @@
 return {
-	{ 
-        "catppuccin/nvim", 
-        priority = 1000, 
+    {
+        "catppuccin/nvim",
+        priority = 1000,
         name = "catppuccin",
         config = function()
             require('catppuccin').load()
@@ -82,7 +82,7 @@ return {
                             Typedef = { fg = cp.yellow },
                             StorageClass = { fg = cp.red, style = { "italic" } },
 
-                            ColorColumn = {  bg = "#222028" },
+                            ColorColumn = { bg = "#222028" },
                             TelescopeBorder = { fg = cp.surface1 },
                             LspInfoBorder = { bg = cp.base, fg = cp.surface1 },
 
@@ -97,10 +97,6 @@ return {
                             LspDiagnosticsHint = { fg = cp.rosewater },
                             LspDiagnosticsVirtualTextHint = { fg = cp.rosewater },
                             LspDiagnosticsUnderlineHint = { sp = cp.rosewater },
-
-                            -- For fidget.
-                            FidgetTitle = { bg = cp.base, fg = cp.teal, style = { "bold" } },
-                            FidgetTask = { bg = cp.base, fg = cp.subtext0 },
 
                             -- For trouble.nvim
                             TroubleNormal = { bg = cp.base },
@@ -190,7 +186,7 @@ return {
                 },
             }
 
-        vim.cmd([[colorscheme catppuccin]])
+            vim.cmd([[colorscheme catppuccin]])
         end
     },
 

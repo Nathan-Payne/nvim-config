@@ -11,7 +11,7 @@ return {
                 layout_strategy = 'flex',
                 layout_config = {
                     height = 0.99,
-                    width = 0.70,
+                    width = 0.80,
                     vertical = {
                         preview_cutoff = 1,
                     },
