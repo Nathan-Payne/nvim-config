@@ -24,9 +24,7 @@ return {
                     properties = {},
                     types = {},
                 },
-                integrations = {
-                    fidget = true,
-                },
+                integrations = {},
                 color_overrides = {
                     mocha = {
                         rosewater = "#F5E0DC",
@@ -179,8 +177,6 @@ return {
 
                             ["@type.css"] = { fg = cp.lavender },
                             ["@property.css"] = { fg = cp.text, style = { "italic" } },
-
-                            javaScriptCommentTodo = { fg = cp.red },
                         }
                     end,
                 },
