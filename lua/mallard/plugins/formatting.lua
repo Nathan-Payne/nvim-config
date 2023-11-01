@@ -22,12 +22,13 @@ return {
         })
 
         vim.keymap.set({ "n", "v" }, "<C-I>", function()
-                conform.format({
-                    lsp_fallback = true,
-                    async = false,
-                    timeout_ms = 1000,
-                })
-            end
+            conform.format({
+                lsp_fallback = true,
+                async = false,
+                timeout_ms = 1000,
+            })
+        end
         )
     end
 }
+
