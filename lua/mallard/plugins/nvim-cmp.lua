@@ -4,25 +4,25 @@ return {
     dependencies = {
         { 'hrsh7th/cmp-buffer' },
         { 'hrsh7th/cmp-path' },
-        { 'L3MON4D3/LuaSnip' },
-        { 'saadparwaiz1/cmp_luasnip' },
-        { 'rafamadriz/friendly-snippets' },
+        -- { 'L3MON4D3/LuaSnip' },
+        -- { 'saadparwaiz1/cmp_luasnip' },
+        -- { 'rafamadriz/friendly-snippets' },
     },
     config = function()
         local cmp = require("cmp")
-        local luasnip = require("luasnip")
+        -- local luasnip = require("luasnip")
 
-        require("luasnip").filetype_extend("javascript", { "javascriptreact" })
-        require("luasnip.loaders.from_vscode").lazy_load()
+        -- require("luasnip").filetype_extend("javascript", { "javascriptreact" })
+        -- require("luasnip.loaders.from_vscode").lazy_load()
 
         cmp.setup({
             completion = {
                 completeopt = 'menu,menuone,noinsert'
             },
             snippet = { -- configure how nvim-cmp interacts with snippet engine
-                expand = function(args)
-                    luasnip.lsp_expand(args.body)
-                end,
+                -- expand = function(args)
+                --     luasnip.lsp_expand(args.body)
+                -- end,
             },
             mapping = cmp.mapping.preset.insert({
                 -- ["<C-k>"] = cmp.mapping.select_prev_item(),
@@ -35,7 +35,7 @@ return {
             }),
             sources = cmp.config.sources({
                 { name = "nvim_lsp" },
-                { name = "luasnip" }, -- snippets
+                -- { name = "luasnip" }, -- snippets
                 { name = "buffer" }, -- text within current buffer
                 { name = "path" }, -- file system paths
         }),

@@ -22,7 +22,7 @@ return {
             vim.keymap.set("n", "<C-SPACE>", vim.lsp.buf.code_action, opts)
             vim.keymap.set("n", "<leader>rr", vim.lsp.buf.references, opts)
             vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-            vim.keymap.set("n", "<C-I>", vim.lsp.buf.format, opts)
+            vim.keymap.set("n", "<C-F>", vim.lsp.buf.format, opts)
             vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
         end
 
@@ -30,7 +30,6 @@ return {
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
         -- Change the Diagnostic symbols in the sign column (gutter)
-        -- (not in youtube nvim video)
         local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
         for type, icon in pairs(signs) do
             local hl = "DiagnosticSign" .. type
@@ -44,7 +43,7 @@ return {
         })
 
         -- configure typescript server with plugin
-        lspconfig["tsserver"].setup({
+        lspconfig["ts_ls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })
@@ -57,8 +56,8 @@ return {
 
         -- configure tailwindcss server
         lspconfig["tailwindcss"].setup({
-        capabilities = capabilities,
-        on_attach = on_attach,
+            capabilities = capabilities,
+            on_attach = on_attach,
         })
 
         -- configure prisma orm server
@@ -96,26 +95,30 @@ return {
             on_attach = on_attach,
         })
 
+        lspconfig["biome"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+
         -- configure lua server (with special settings)
         lspconfig["lua_ls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
             settings = { -- custom settings for lua
                 Lua = {
-                -- make the language server recognize "vim" global
-                diagnostics = {
-                    globals = { "vim" },
-                },
-                workspace = {
-                    -- make language server aware of runtime files
-                    library = {
-                    [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                    [vim.fn.stdpath("config") .. "/lua"] = true,
+                    -- make the language server recognize "vim" global
+                    diagnostics = {
+                        globals = { "vim" },
                     },
-                },
+                    workspace = {
+                        -- make language server aware of runtime files
+                        library = {
+                            [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                            [vim.fn.stdpath("config") .. "/lua"] = true,
+                        },
+                    },
                 },
             },
         })
-
     end
 }

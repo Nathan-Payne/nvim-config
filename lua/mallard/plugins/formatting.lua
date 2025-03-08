@@ -6,22 +6,22 @@ return {
 
         conform.setup({
             formatters_by_ft = {
-                javascript = { "prettier" },
-                typescript = { "prettier" },
-                javascriptreact = { "prettier" },
-                typescriptreact = { "prettier" },
-                css = { "prettier" },
+                javascript = { "biome" },
+                typescript = { "biome" },
+                javascriptreact = { "biome" },
+                typescriptreact = { "biome" },
+                css = { "biome" },
                 html = { "prettier" },
                 json = { "jq" },
                 yaml = { "prettier" },
                 markdown = { "prettier" },
-                graphql = { "prettier" },
+                graphql = { "biome" },
                 lua = { "stylua" },
                 golang = { "gofumpt" },
             }
         })
 
-        vim.keymap.set({ "n", "v" }, "<C-I>", function()
+        vim.keymap.set({ "n", "v" }, "<C-F>", function()
             conform.format({
                 lsp_fallback = true,
                 async = false,
@@ -31,4 +31,3 @@ return {
         )
     end
 }
-
