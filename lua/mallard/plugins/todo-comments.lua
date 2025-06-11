@@ -71,7 +71,6 @@ return {
 
         -- todo-comments map telescope and jump to todo comments
         vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>")
-        vim.keymap.set("n", "<leader>/", "<cmd>TodoTrouble<CR>")
 
         vim.keymap.set("n", "]t", function()
             todo_comments.jump_next()

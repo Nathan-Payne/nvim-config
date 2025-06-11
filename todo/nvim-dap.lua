@@ -32,13 +32,3 @@ vim.keymap.set("v", "<leader>de", "<cmd>lua require('dapui').eval()<cr>", { nore
 
 vim.fn.sign_define('DapBreakpoint',{ text ='🟥', texthl ='', linehl ='', numhl =''})
 vim.fn.sign_define('DapStopped',{ text ='▶️', texthl ='', linehl ='', numhl =''})
-
--- todo: get working with docker
--- zend_extension=xdebug.so
--- xdebug.mode = debug,profile
--- xdebug.output_dir = /var/www/results
--- xdebug.start_with_request = yes
--- xdebug.idekey=docker
--- xdebug.client_port=9003
--- xdebug.client_host=host.docker.internal
--- xdebug.discover_client_host=0
